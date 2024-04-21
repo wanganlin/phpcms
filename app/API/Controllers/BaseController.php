@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace App\API\Common\Controllers;
+namespace App\API\Controllers;
 
 use App\Http\Controllers\Controller;
 use OpenApi\Attributes as OA;
@@ -12,12 +12,5 @@ use OpenApi\Attributes\Contact;
 #[OA\Server(url: '/', description: '开发环境')]
 abstract class BaseController extends Controller
 {
-    protected function initialize(): void
-    {
-        $default = config('app.default_theme', 'default');
 
-        Config::set([
-            'view_dir_name' => 'public/themes/'.$default.'/html',
-        ], 'view');
-    }
 }

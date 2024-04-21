@@ -6,5 +6,4 @@ namespace App\Enums;
 
 enum StatusEnum: int
 {
-
 }
