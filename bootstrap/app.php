@@ -14,5 +14,11 @@ return Application::configure(basePath: dirname(__DIR__))
         //
     })
     ->withExceptions(function (Exceptions $exceptions) {
-        //
+        /*if (request()->ajax()) {
+            return response()->json([
+                'code' => $exceptions->getCode(),
+                'message' => $exceptions->getMessage(),
+                'data' => null
+            ]);
+        }*/
     })->create();
